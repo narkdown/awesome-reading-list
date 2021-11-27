@@ -1,0 +1,40 @@
+{
+  "name": "@narkdown/awesome-reading-list",
+  "version": "0.0.0",
+  "description": "Create your own Awesome Reading List sync with Notion Database",
+  "keywords": [
+    "notion",
+    "notionapi",
+    "awesome",
+    "awesome-list",
+    "markdown",
+    "actions",
+    "github-actions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narkdown/awesome-reading-list.git"
+  },
+  "license": "MIT",
+  "author": "Younho Choo <yo+github@younho9.com>",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build index.js --license LICENSE"
+  },
+  "dependencies": {
+    "@actions/core": "1.6.0",
+    "@actions/github": "5.0.0",
+    "@narkdown/client": "0.4.0",
+    "@narkdown/notion-parser": "0.6.0",
+    "@narkdown/notion-utils": "0.1.0",
+    "ejs": "3.1.6",
+    "prettier": "2.5.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.31.1"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}

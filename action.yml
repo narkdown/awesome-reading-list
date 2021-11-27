@@ -1,0 +1,53 @@
+name: "@narkdown/awesome-reading-list"
+
+description: Get parsed rows of Notion database
+
+branding:
+  icon: arrow-down
+  color: white
+
+inputs:
+  notion_api_token:
+    description: Notion API Key.
+    required: true
+
+  notion_database_url:
+    description: Notion Database ID.
+    required: true
+
+  gist_token:
+    required: true
+    description: Personal access token for updating gist.
+
+  gist_id:
+    required: true
+    description: Id of the gist to be updated.
+
+  file_name:
+    required: false
+    description: Name of the file to be deployed on gist.
+    default: awesome-reading-list.md
+
+  date_option_timezone:
+    description: Timezone ID used to parse date properties.
+    required: false
+    default: Asia/Seoul
+
+  date_option_format:
+    description: Date formatting rules used to parse data properties.
+    required: false
+    default: yyyy-MM-dd HH:mm:ss
+
+  sort_option_timestamp:
+    description: Database query sorting criteria. (created_time | last_edited_time)
+    required: false
+    default: created_time
+
+  sort_option_direction:
+    description: Database query sorting direction. (ascending | descending)
+    required: false
+    default: descending
+
+runs:
+  using: "node12"
+  main: "dist/index.js"

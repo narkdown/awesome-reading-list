@@ -1,0 +1,23 @@
+name: sync-with-gist
+
+on:
+  schedule:
+    - cron: 0 0 * * * # at 00:00 AM (UTC) on everyday.
+  push:
+    branches:
+      - ci/**
+  workflow_dispatch: {}
+
+jobs:
+  sync-with-gist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - id: awesome-reading-list
+        uses: narkdown/awesome-reading-list@main
+        with:
+          notion_api_token: ${{ secrets.NOTION_API_TOKEN }}
+          notion_database_url: ${{ secrets.NOTION_DATABASE_URL }}
+          gist_token: ${{ secrets.GIST_TOKEN }}
+          gist_id: ${{ secrets.GIST_ID }}
