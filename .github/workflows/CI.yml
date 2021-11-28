@@ -1,4 +1,4 @@
-name: sync-with-gist
+name: CI
 
 on:
   schedule:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  sync-with-gist:
+  CI:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

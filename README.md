@@ -1,7 +1,7 @@
 # @narkdown/awesome-reading-list [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 [![GitHub Action: View on Marketplace](https://img.shields.io/badge/GitHub%20Action-View_on_Marketplace-blue?logo=github)](https://github.com/marketplace/actions/narkdown-awesome-reading-list)
-[![narkdown](https://github.com/narkdown/awesome-reading-list/actions/workflows/sync-with-gist.yml/badge.svg?branch=main&event=schedule)](https://github.com/narkdown/awesome-reading-list/actions/workflows/sync-with-gist.yml)
+[![CI](https://github.com/narkdown/awesome-reading-list/actions/workflows/CI.yml/badge.svg?branch=main&event=schedule)](https://github.com/narkdown/awesome-reading-list/actions/workflows/CI.yml)
 [![GitHub version](https://badge.fury.io/gh/narkdown%2Fawesome-reading-list.svg)](https://badge.fury.io/gh/narkdown%2Fawesome-reading-list)
 [![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
@@ -42,8 +42,16 @@
 
    - **GIST_TOKEN**: The GitHub token generated above.
 
-4. Your awesome reading list will be deployed [at 00:00 AM (UTC) on everyday](./.github/workflows/sync-with-gist.yml#L5). You can trigger action manually.
+4. Your awesome reading list will be deployed [at 00:00 AM (UTC) on everyday](https://github.com/younho9/awesome-reading-list/blob/main/.github/workflows/CI.yml#L5). You can trigger action manually.
 5. Add your reading list to Notion database. You can use extensions like [Notion Web Clipper](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk) or [Save to Notion](https://chrome.google.com/webstore/detail/save-to-notion/ldmmifpegigmeammaeckplhnjbbpccmm).
+
+### Customize
+
+If you want to generate your own markdown using Notion Database data, you can customize template.
+
+1. Modify [template.md](./template.md)
+2. `npm install && npm run build`
+3. Change `narkdown/awesome-reading-list@main` to `{your username}/awesome-reading-list@main` in [.github/workflows/CI.yml](./.github/workflows/CI.yml#L18)
 
 ## Inputs
 
@@ -100,7 +108,7 @@ _Default_ `descending`
 
 ## Example workflow
 
-- [.github/workflows/sync-with-gist.yml](https://github.com/narkdown/awesome-reading-list/blob/main/.github/workflows/sync-with-gist.yml)
+- [.github/workflows/CI.yml](./.github/workflows/CI.yml#L18)
 
 ## Related
 
