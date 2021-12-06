@@ -28,6 +28,11 @@ inputs:
     description: Name of the file to be deployed on gist.
     default: awesome-reading-list.md
 
+  template_name:
+    description: EJS template file path.
+    required: false
+    default: default-template.md
+
   date_option_timezone:
     description: Timezone ID used to parse date properties.
     required: false

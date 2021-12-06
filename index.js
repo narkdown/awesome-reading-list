@@ -12,6 +12,7 @@ try {
   const notionAPIKey = getInput("notion_api_token");
   const databaseUrl = getInput("notion_database_url");
   const fileName = getInput("file_name");
+  const templateName = getInput("template_name");
   const token = getInput("gist_token");
   const gistId = getInput("gist_id");
 
@@ -39,7 +40,7 @@ try {
     const rows = notionParser.database.getRows(results);
 
     const template = await fs.promises.readFile(
-      path.resolve("./template.md"),
+      path.resolve(`./templates/${templateName}`),
       "utf8"
     );
 
