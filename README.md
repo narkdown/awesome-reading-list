@@ -49,7 +49,7 @@
 
 If you want to generate your own markdown using Notion Database data, you can customize template.
 
-1. Modify [template.md](./template.md)
+1. Modify [templates/default-template.md](./templates/default-template.md) or Create new template file.
 2. `npm install && npm run build`
 3. Change `narkdown/awesome-reading-list@main` to `{your username}/awesome-reading-list@main` in [.github/workflows/CI.yml](./.github/workflows/CI.yml#L18)
 
@@ -79,6 +79,12 @@ If you want to generate your own markdown using Notion Database data, you can cu
 Name of the file to be deployed on gist.
 
 _Default_ `awesome-reading-list.md`
+
+### `template_name`
+
+EJS template file path.
+
+_Default_ `default-template.md`
 
 ### `date-option-timezone`
 
