@@ -1,4 +1,4 @@
-name: "@narkdown/awesome-reading-list"
+name: '@narkdown/awesome-reading-list'
 
 description: Get parsed rows of Notion database
 
@@ -54,5 +54,5 @@ inputs:
     default: descending
 
 runs:
-  using: "node12"
-  main: "dist/index.js"
+  using: 'node16'
+  main: 'dist/index.js'
